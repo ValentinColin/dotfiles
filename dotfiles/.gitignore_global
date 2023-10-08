@@ -1,0 +1,26 @@
+# Mac OS
+.DS_Store
+
+# Logs
+log/
+*.log
+
+# Python
+__pychache__
+.venv
+
+# Temporary files
+*.bak
+*.swp
+*.swo
+*~
+*#
+
+# IDE files
+.vscode
+.idea
+.iml
+*.sublime-workspace
+
+# Env
+*.env

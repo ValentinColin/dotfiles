@@ -1,0 +1,17 @@
+[user]
+	name = Valentin Colin
+	email = valentin.colin78@gmail.com
+[init]
+	defaultBranch = master
+[core]
+	excludesfile = ~/.gitignore_global
+[commit]
+	gpgsign = true
+[tag]
+	gpgsign = true
+[pull]
+	rebase = true
+[submodule]
+	recurse = true
+[alias]
+	logs = log --show-signature
