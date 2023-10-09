@@ -47,7 +47,9 @@ These scripts are intended to install common packages on proper os :
 
 - [setup-osx.sh](./setup/setup-osx.sh)
 - [setup-debian.sh](./setup/setup-debian.sh)
-- setup-windows.ps1 [TODO: a least for oh-my-posh]
+- [setup-windows.ps1](./setup/setup-powershell.ps1)
+
+### Only for osx/debian
 
 It can install severals profiles in addition to the core install by providing `-p <profile_name>` *(example: `./setup-osx.sh -p base`)*. The following additional profiles are available :
 
