@@ -2,8 +2,8 @@
 ### Paramètres ###
 ##################
 
-enable_exa=true
-enable_exa_tree=true
+enable_eza=true
+enable_eza_tree=true
 enable_bat=true
 
 if [[ "$(uname -s)" = "Darwin" ]]; then
@@ -32,7 +32,7 @@ set_title () {
 }
 
 ### Raccourci terminal
-alias reload="exec $SHELL"
+alias reload='exec $SHELL'
 alias quit=exit
 
 ### Raccourci d'ouverture de dossier dans le finder
@@ -47,18 +47,18 @@ fi
 ### BASIC COMMAND ALIASES ###
 #############################
 
-### ls / exa
-#if [ which exa &>/dev/null ]; then
-if [ $enable_exa = "true" ]; then
-	# Remplacement de ls par exa
-	alias ls="exa --classify --icons --group-directories-first"
-	alias la="exa --classify --icons --group-directories-first --all"
-	alias ll="exa --classify --icons --group-directories-first --long --header --group --git"
-	alias lla="exa --classify --icons --group-directories-first --all --long --header --group --git"
+### ls / eza
+if command -v eza &>/dev/null; then
+#if [ $enable_eza = "true" ]; then
+	# Remplacement de ls par eza
+	alias ls="eza --classify --icons --group-directories-first"
+	alias la="eza --classify --icons --group-directories-first --all"
+	alias ll="eza --classify --icons --group-directories-first --long --header --group --git"
+	alias lla="eza --classify --icons --group-directories-first --all --long --header --group --git"
 
-	# remplacement de tree par celui de exa
-	if [ $enable_exa_tree = "true" ]; then
-		alias tree="exa --tree --classify"
+	# Remplacement de tree par celui de eza
+	if [ "$enable_eza_tree" = "true" ]; then
+		alias tree="eza --tree --classify"
 	fi
 else
 	if [ "$OS" = "Linux" ]; then

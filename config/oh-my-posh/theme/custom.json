@@ -22,6 +22,12 @@
 					"template": "{{.Icon}} "
 				},
 				{
+					"type": "python",
+					"style": "plain",
+					"foreground": "p:yellow",
+					"template": "{{ if .Error }}({{ .Error }}){{ else }}( {{ .Full }}){{ end }} "
+				},
+				{
 					"type": "session",
 					"style": "plain",
 					"foreground": "p:yellow",

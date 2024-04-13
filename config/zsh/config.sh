@@ -11,7 +11,7 @@ select-word-style bash 	# ctrl+w on words
 ############
 
 if [ "$(whoami)" = "root" ]; then
-    echo $(cat ~/git/.dotfiles/zsh/born2Root.txt)
+    cat ~/git/.dotfiles/zsh/born2Root.txt
 fi;
 
 ####################
@@ -53,7 +53,7 @@ zstyle ':completion::complete:*' use-cache on                                 # 
 zstyle ':completion:*' cache-path ~/.zsh/cache                                # cache path
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'                     # ignore case
 zstyle ':completion:*' menu select=2                                          # menu if nb items > 2
-zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}                         # colorz !
+zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"                       # colorz !
 zstyle ':completion:*::::' completer _expand _complete _ignored _approximate  # list of completers to use
 zstyle ':completion:*' accept-exact '*(N)'
 
@@ -71,7 +71,7 @@ zstyle ':completion:*:*:kill:*:processes' list-colors "=(#b) #([0-9]#)*=29=34"
 zstyle ':completion:*:*:killall:*' menu yes select
 zstyle ':completion:*:killall:*' force-list always
 users=(valentin root)            # because I don't care about others
-zstyle ':completion:*' users $users
+zstyle ':completion:*' users "$users"
 
 #generic completion with --help
 compdef _gnu_generic gcc
@@ -136,7 +136,7 @@ TERM=xterm-256color                             # Colorz!
 ### Antigen ###
 ###############
 ANTIGEN_CACHE=false
-source ${0:a:h}/antigen/antigen.zsh
+source "${0:a:h}"/antigen/antigen.zsh
 
 # Bundle
 #antigen bundle zsh-users/zsh-completions        # remove good completions, so no

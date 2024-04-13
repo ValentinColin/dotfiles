@@ -7,10 +7,10 @@ preexec_functions=()
 function expand_aliases {
   input_command=$1
   expanded_command=$2
-  if [ $input_command != $expanded_command ]; then
-    print -nP $PROMPT
-    echo $expanded_command
+  if [ "$input_command" != "$expanded_command" ]; then
+    print -nP "$PROMPT"
+    echo "$expanded_command"
   fi
 }
 
-preexec_functions+=expand_aliases
+preexec_functions+=(expand_aliases)

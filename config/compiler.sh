@@ -3,7 +3,7 @@
 ##############
 
 # gcc/g++
-if [ $OS = "Darwin" ]; then
+if [ "$OS" = "Darwin" ]; then
 	alias gcc="/usr/local/Cellar/gcc/11.2.0/bin/gcc-11"
 	alias g++="/usr/local/Cellar/gcc/11.2.0/bin/g++-11"
 fi
