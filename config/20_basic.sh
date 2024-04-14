@@ -85,7 +85,7 @@ alias ......="cd ../../../../.."
 
 # Crée un dossier et rentre dedans avec cd
 mcd () {
-	mkdir -p -- "$1" && cd -P -- "$1"
+	mkdir -p -- "$1" && cd -P -- "$1" || exit
 }
 
 cdl () {
