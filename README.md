@@ -17,13 +17,14 @@ config/
 │  ├── born2root.txt
 │  ├── config.sh
 │  └── explicit_aliases.sh
-├── basic.sh
-├── cargo.sh
-├── compiler.sh
-├── docker.sh
-├── git.sh
-├── python.sh
-└── ssh.sh
+├── 10_cargo.sh
+├── 20_basic.sh
+├── 30_compiler.sh
+├── 40_docker.sh
+├── 50_git.sh
+├── 60_ssh.sh
+├── 70_python.sh
+└── 80_gpg.sh
 ```
 
 ## Dotfiles
