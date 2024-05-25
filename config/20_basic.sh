@@ -31,6 +31,14 @@ set_title () {
     echo -en "\e]0;$*\a"
 }
 
+# Encode / Decode Base64
+enc () {
+  echo -n "$1" | base64
+}
+dec () {
+  echo "$1" | base64 -d
+}
+
 ### Raccourci terminal
 alias reload='exec $SHELL'
 alias quit=exit
