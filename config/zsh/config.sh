@@ -41,7 +41,7 @@ fpath+=~/.zfunc
 autoload -Uz compinit
 compinit
 zmodload -i zsh/complist
-setopt completealiases          # complete alisases
+# setopt completealiases          # complete alisases # NOTE: DISABLED IN ORDER TO WORK WITH KUBECTL, wtf?
 setopt hash_list_all            # hash everything before completion
 setopt always_to_end            # when completing from the middle of a word, move the cursor to the end of the word
 setopt auto_param_slash         # when completing a directory, a slash is added

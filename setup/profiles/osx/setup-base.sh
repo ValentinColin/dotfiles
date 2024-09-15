@@ -29,6 +29,7 @@ brew install --formulae \
   glab \
   gnupg \
   jq \
+  kubectl \
   nmap \
   ripgrep \
   rsync \
